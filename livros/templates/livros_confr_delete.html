@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LivrosForm</title>
+</head>
+<body>
+    <h1>Deseja realmente excluir esse livro?</h1>
+    <form method="POST">
+        {% csrf_token %}
+      <button type="submit">Confirmar</button>
+        <button type="button">
+        <a href="{% url 'list_livros' %}">Cancelar</a>
+    </button>
+    </form>
+</body>
+</html>
